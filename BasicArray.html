@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Array in JAvASCRIPT</title>
 </head>
 
@@ -13,36 +13,92 @@
 <script>
     let num = [1, 3, 8, 2, 5];
     //for loop.
-    // for (let i = 0; i < num.length; i++) {
-    //     console.log(num[i]);
-
-    // }
+    for (let i = 0; i < num.length; i++) {
+        //     console.log(num[i]);
+    }
 
     // foreach loop.
-    // num.forEach(element => {
-    //     console.log(element * element);
-    // });
+    num.forEach((element) => {
+        //     console.log(element * element);
+    });
 
     //array form.
-    let name = "hunny"
+    let name = "hunny";
     let arr = Array.from(name);
     // console.log(arr);
 
     //map() array.
-    let count = [1, 2, 3, 4, 5]
+    let count = [1, 2, 3, 4, 5];
     let arr2 = count.map((value) => {
         // console.log(value);
-        return value + 1
-    }
-    )
+        return value + 1;
+    });
     // console.log(arr2);
 
     // filter array.
-    let arr3 = [2, 4, , 5, 3, 6, 7]
+    let arr3 = [2, 4, , 5, 3, 6, 7];
     let total = arr3.filter((e) => {
         return e <= 5;
-    })
-    console.log(total);
+    });
+    // console.log(total);
+
+    // reduce array in js
+    let arr4 = [152, 40, 12];
+    let newarr4 = arr4.reduce((h1, h2) => {
+        return h1 - h2;
+    });
+    // console.log(newarr4);
+
+    // Shift and unshift in js
+    let arr5 = ["array", "loop", "func", "elements"];
+    // console.log(arr5);
+    // arr5.shift()                  //using shift for removing the first value
+    // console.log(arr5);
+    // arr5.unshift('huuny')         //using unshift for adding the first value
+    // console.log(arr5);
+
+    //pop and push  in js
+    let arr6 = ["angle", "devil", "God", "creations"];
+    // console.log(arr6);
+    // arr6.pop()                //using pop for removing from last value
+    // console.log(arr6);
+    // arr6.push('humans')
+    // console.log(arr6);        //using push  for adding the last value
+
+    //concat and join in js
+    let arr7 = ["earth", "planet", "sky"];
+    let arr8 = ["water", "fire"];
+    let arr9 = arr7.concat(arr8);
+    // console.log(arr9);
+    arr10 = arr9.join(" / ");
+    // console.log(arr10);
+
+    //slice and splice in js
+    let ar11 = ["angle", "God", "devil", "creations"];
+    let ar12 = ar11.slice(1, 3); // using slice for removing mid values and create new array
+    // console.log(ar12);
+    ar11.splice(2, 1, "huuny", "bunny"); //using splice for adding the value in any part of array and can also remove another values after the new array.
+    // console.log(ar11);
+
+    //sorting and reverse in js
+    let ar13 = ["mango", 3, 2, 5, 4, "hunny", "bunny", 11, "sunny", 7, 6, 1];
+    ar13.sort(); // using sort for arranging the value by sequence
+    // console.log(ar13);
+    ar13.reverse(); // using reverse for changing the value backward
+    // console.log(ar13);
+
+    //isArray in js
+    let ar14 = ['2', '3', '4']
+    // let ar14 = 2;
+    console.log(ar14);
+    ar15 = Array.isArray(ar14)
+    console.log(ar15);
+    if (Array.isArray(ar14)) {
+        console.log('This is an array');
+    } else {
+        console.log("This is not array");
+    }
+
 </script>
 
 </html>
